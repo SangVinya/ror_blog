@@ -2,12 +2,12 @@
 
 Simple blog. Contains:
 
-- controllers for posts and comments
+- controllers for posts, comments, users and sessions
 
-- post and comment models with validations and 'has-many'-connection
+- post, comment, user models 
 
-- views with representation of posts and comments; partials with forms
+- views 
 
-- simple authentication
+- reqistration, sessions
 
 - setted bootstrap (but not using yet)
