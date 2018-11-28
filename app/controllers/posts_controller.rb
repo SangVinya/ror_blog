@@ -5,6 +5,11 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    if cookies[:views].present?
+      cookies[:views] = cookies[:views].to_i + 1
+    else
+      1
+    end
   end
 
   def show
@@ -19,10 +24,11 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(post_params)
+    @post.user = User.first
     if @post.save
-      redirect_to @post
+      # add post to table
     else
-      render 'new'
+      # some alert
     end
   end
 
@@ -45,6 +51,6 @@ class PostsController < ApplicationController
     end
 
     def post_params
-      params.require(:post).permit(:title, :text)
+      params.require(:post).permit(:title, :text, :image)
     end
 end

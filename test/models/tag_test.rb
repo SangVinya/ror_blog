@@ -1,10 +1,9 @@
 # == Schema Information
 #
-# Table name: comments
+# Table name: tags
 #
 #  id         :integer          not null, primary key
-#  commenter  :string
-#  body       :text
+#  name       :string
 #  post_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
@@ -12,7 +11,7 @@
 
 require 'test_helper'
 
-class CommentTest < ActiveSupport::TestCase
+class TagTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

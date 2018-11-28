@@ -1,7 +1,12 @@
+<%= notice %>
+
 <p>
   <strong>Title:</strong>
   <%= @post.title %>
 </p>
+
+<%= image_tag @post.image_url if @post.image.present? %>
+
 <p>
   <strong>Text:</strong>
   <%= @post.text %>

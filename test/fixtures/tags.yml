@@ -1,22 +1,20 @@
 # == Schema Information
 #
-# Table name: posts
+# Table name: tags
 #
 #  id         :integer          not null, primary key
-#  title      :string
-#  text       :text
+#  name       :string
+#  post_id    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  user_id    :integer
-#  image      :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  text: MyText
+  name: MyString
+  post: one
 
 two:
-  title: MyString
-  text: MyText
+  name: MyString
+  post: two
